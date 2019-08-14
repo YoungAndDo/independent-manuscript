@@ -1,0 +1,87 @@
+html {
+    min-width: calc(26.5rem + 2px);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: ivory;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px gray solid;
+    background-color: white;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-family: 'baekboem';
+}
+
+.paper-container .title {
+    font-size: 0.75rem;
+}
+
+.custom-select {
+    width: initial;
+    font-size: 0.75rem;
+}
+
+.btn {
+    font-size: 0.75rem;
+    margin-left: 0.5rem; 
+}
+
+.form-control {
+    display: inline-block;
+    max-width: calc(26.5rem + 2px);
+}
+
+section {
+    margin: 0 auto 1rem;
+}
+
+.paper-container {
+    display: inline-block;
+    padding: 1.75rem;
+    background-color: ghostwhite;
+    color: #333;
+}
+
+.paper {
+    border: 1px red solid;
+    padding: 0.5rem 0.25rem;
+    display: inline-block;
+    font-family: 'baekboem';
+}
+
+.paper span {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0px 0.25rem;
+    margin-top: -1px;
+    text-align: center;
+    border: 1px gray solid;
+    border-top-width: 0px;
+}
+
+.paper .upper {
+    border-top: 1px gray solid;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    padding: 2rem 1rem;
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: white;
+}

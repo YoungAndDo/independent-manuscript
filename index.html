@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>독립원고</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font.css">
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <span class="title">독립원고</span>
+
+        <span>
+            <select id="font-selector" class="custom-select">
+                <option value="baekboem" selected>백범김구체</option>
+                <option value="doema">안중근체</option>
+                <option value="dongju-seosi">윤동주체-서시</option>
+                <option value="dongju-star">윤동주체-별헤는밤</option>
+                <option value="maehoen">윤봉길체</option>
+                <option value="manhae">한용운체</option>
+            </select>
+
+            <button id="saveButton" type="button" class="btn btn-outline-dark">이미지 저장</button>
+        </span>
+    </header>
+    <section>
+        <textarea id="input" class="form-control" cols="30" rows="6" maxlength="150" placeholder="원하는 문구를 입력하세요"></textarea>
+    </section>
+    <section>
+        <div class="paper-container" id="paperContainer">
+            <div class="paper" id="paper"></div>
+            <br>
+            <div class="title">독립원고 - 2019년 8월 15일 광복절을 맞이하며</div>
+        </div>
+    </section>
+    <footer>
+        본 프로젝트는 GS칼텍스의 독립서체 캠페인에 영감을 얻어 진행하였습니다. <br> 
+        Contact: yd199323@gmail.com <br>
+        <a target="_blank" href="https://gscaltexmediahub.com/tag/%EB%8F%85%EB%A6%BD%EC%84%9C%EC%B2%B4/">GS칼텍스 독립서체 캠페인 바로가기</a> <br>
+        © 2019. Young-do Cho. All rights reserved.
+    </footer>
+</body>
+</html>
