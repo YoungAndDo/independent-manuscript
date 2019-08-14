@@ -5,14 +5,13 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background-color: ivory;
+    background-color: gray;
     text-align: center;
 }
 
 header {
     position: relative;
     height: 3.5rem;
-    margin-bottom: 1rem;
     border-bottom: 1px gray solid;
     background-color: white;
 }
@@ -52,7 +51,12 @@ header {
 }
 
 section {
-    margin: 0 auto 1rem;
+    padding: 1rem 0;
+    background-color: ivory;
+}
+
+section:last-of-type {
+    padding-bottom: 3rem; 
 }
 
 .paper-container {
