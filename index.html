@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="font.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
     <script src="html2canvas.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="index_babel.js" defer></script>
 </head>
 <body>
     <header>
         <span class="title">독립원고</span>
 
-        <span>
+        <span class="btns">
             <select id="font-selector" class="custom-select">
                 <option value="baekboem" selected>백범김구체</option>
                 <option value="doema">안중근체</option>
@@ -36,7 +37,7 @@
         <div class="paper-container" id="paperContainer">
             <div class="paper" id="paper"></div>
             <br>
-            <div class="title">독립원고 - 2019년 8월 15일 광복절을 맞이하며</div>
+            <div class="description">독립원고 - 2019년 8월 15일 광복절을 맞이하며</div>
         </div>
     </section>
     <footer>

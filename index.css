@@ -10,25 +10,34 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+    position: relative;
+    height: 3.5rem;
     margin-bottom: 1rem;
     border-bottom: 1px gray solid;
     background-color: white;
 }
 
 .title {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
     font-size: 1.5rem;
     font-family: 'baekboem';
 }
 
-.paper-container .title {
+.btns {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.description {
+    font-family: 'baekboem';
     font-size: 0.75rem;
 }
 
 .custom-select {
-    width: initial;
+    width: inherit;
     font-size: 0.75rem;
 }
 
