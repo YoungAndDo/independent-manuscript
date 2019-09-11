@@ -1,0 +1,24 @@
+@font-face {
+    font-family: baekboem;
+    src: url('../fonts/baekboem.woff') format('woff')
+}
+@font-face {
+    font-family: doema;
+    src: url('../fonts/doema.woff') format('woff')
+}
+@font-face {
+    font-family: dongju-seosi;
+    src: url('../fonts/dongju-seosi.woff') format('woff')
+}
+@font-face {
+    font-family: dongju-star;
+    src: url('../fonts/dongju-star.woff') format('woff')
+}
+@font-face {
+    font-family: maehoen;
+    src: url('../fonts/maehoen.woff') format('woff')
+}
+@font-face {
+    font-family: manhae;
+    src: url('../fonts/manhae.woff') format('woff')
+}
