@@ -1,8 +1,6 @@
 const startString = '대한독립만세';
 const upper = 'upper';
 
-window.html2canvas = html2canvas;
-
 const addSpaces = spaceLength => {
     let spaces = '';
     for (let i = 0; i < spaceLength; i++) {
