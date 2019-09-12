@@ -52,21 +52,47 @@ document.querySelector('#font-selector').addEventListener('change', () => {
     document.querySelector('.description').style.fontFamily = selectedFont;
 });
 
-document.querySelector('#saveButton').addEventListener('click', () => {
-    html2canvas(document.querySelector('#paperContainer')).then(canvas => {
-        const filename = `${Date.now().toLocaleString()}.png`;
-        if (canvas.msToBlob) { //for IE
-            const blob = canvas.msToBlob();
-            window.navigator.msSaveBlob(blob, filename);
-        } else {  //other browsers
-            const link = document.createElement('a');
-            document.body.appendChild(link);
-            link.download = filename;
-            link.href = canvas.toDataURL('image/png');
-            link.target = '_blank';
-            link.click();
-        }
-    });    
+// 출처: https://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata
+function dataURItoBlob(dataURI) {
+    // convert base64/URLEncoded data component to raw binary data held in a string
+    const byteString = (dataURI.split(',')[0].indexOf('base64') >= 0 ? 
+        atob(dataURI.split(',')[1]) : 
+        unescape(dataURI.split(',')[1]));
+
+    // separate out the mime component
+    const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+    // write the bytes of the string to a typed array
+    const ia = new Uint8Array(byteString.length);
+    for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ia], {type: mimeString});
+}
+
+document.querySelector('#saveButton').addEventListener('click', async () => {
+    const canvas = await html2canvas(document.querySelector('#paperContainer'));
+    const filename = `${new Date().toLocaleString()}.png`;
+    if (canvas.msToBlob) { //for IE
+        const blob = canvas.msToBlob();
+        return window.navigator.msSaveBlob(blob, filename);
+    }
+    //other browsers
+    //참고: http://charlie0301.blogspot.com/2014/10/html5-canvas-blob-data-post-upload.html
+    const dataurl = canvas.toDataURL('image/png');
+    const blob = dataURItoBlob(dataurl);
+    const formData = new FormData();
+    formData.append('file', blob);
+
+    const result = await fetch('upload', {method: 'POST', body: formData}).then(res => res.json());
+    if (result.message == 'finished') {
+        const link = document.createElement('a');
+        link.href = 'download';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+    }
 });
 
 makeManuscript(startString);
