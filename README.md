@@ -1,7 +1,7 @@
 # '독립원고' 프로젝트 소개
 
 ## 배포 url
-http://bit.ly/독립원고_프로젝트
+https://independent-manuscript.s3.ap-northeast-2.amazonaws.com/index.html
 
 ## 1. 시작하게된 계기
 [GS칼텍스의 독립서체 캠페인](https://gscaltexmediahub.com/tag/%EB%8F%85%EB%A6%BD%EC%84%9C%EC%B2%B4/)을 우연히 알게 되었습니다. 
